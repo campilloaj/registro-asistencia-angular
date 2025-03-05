@@ -1,0 +1,44 @@
+<form [formGroup]="formLogin" (ngSubmit)="handleSubmt()">
+
+  
+
+  <mat-card appearance="outlined" class="fasi-card">
+    
+    <h1>Control asistencia</h1>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input formControlName="email" matInput placeholder="Email" />
+      <mat-icon matSuffix>account_circle</mat-icon>
+      <!-- <mat-hint>Hint</mat-hint>
+        <div *ngIf="formLogin.get('email').invalid && formLogin.get('email').touched">
+        <small *ngIf="formLogin.get('email').errors.required">Email es requerido.</small>
+        <small *ngIf="formLogin.get('email').errors.email">Email incorrecto.</small>
+       </div> 
+      -->
+      @if(formLogin.get('email')?.invalid && formLogin.get('email')?.touched){
+        <mat-hint>
+            @if( formLogin.get('email')?.errors){
+              <small>Email es requerido.</small>
+            }
+      </mat-hint> }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Contraseña</mat-label>
+      <input
+        maxlength="6"
+        formControlName="password"
+        type="password"
+        matInput
+        placeholder="Contraseña"
+      />
+      <mat-icon matSuffix>password</mat-icon>
+      <!-- <mat-hint>Hint</mat-hint>-->
+    </mat-form-field>
+
+    <button type="submit" [disabled]="formLogin.invalid" mat-stroked-button>
+      Iniciar sesión
+    </button>
+  </mat-card>
+</form>

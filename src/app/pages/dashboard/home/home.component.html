@@ -1,0 +1,21 @@
+<main>
+ 
+
+  <section class="fasi-home-container">
+    @for( item of listOptions; track item.id){
+    <mat-card
+      appearance="raised"
+      class="fasi-home-card"
+      (click)="goOption(item.path)"
+    >
+      <mat-card-content>
+        <mat-card-title class="fasi-card-title">{{
+          item.title
+        }}</mat-card-title>
+      </mat-card-content>
+    </mat-card>
+    }
+  </section>
+</main>
+
+

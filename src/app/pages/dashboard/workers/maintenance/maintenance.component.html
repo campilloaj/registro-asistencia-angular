@@ -1,0 +1,73 @@
+<div class="fasi-div-container">
+  <mat-card appearance="raised" style="min-width:350px; max-width: 70%;">
+    <mat-card-content class="fasi-card-form">
+      <section class="fasi-grid-container">
+
+        <div class="fasi-grid-item">
+        <mat-form-field appearance="outline" class="custom-form-field">
+          <mat-label>Nombre</mat-label>
+          <input matInput />
+        </mat-form-field>
+        </div>
+
+        <div class="fasi-grid-item">
+        <mat-form-field appearance="outline" class="custom-form-field">
+          <mat-label>Primer apellido</mat-label>
+          <input matInput />
+        </mat-form-field>
+      </div>
+
+      <div class="fasi-grid-item">
+        <mat-form-field appearance="outline" class="custom-form-field">
+          <mat-label>Segundo apellido</mat-label>
+          <input matInput />
+        </mat-form-field>
+      </div>
+   
+      <div class="fasi-grid-item">
+        <mat-form-field appearance="outline" class="custom-form-field">
+          <mat-label>N° identificación</mat-label>
+          <input matInput />
+        </mat-form-field>
+      </div>
+
+      <div class="fasi-grid-item">
+        <mat-form-field appearance="outline" class="custom-form-field">
+          <mat-label>Nombre ubicación</mat-label>
+          <input type="text"
+                 placeholder="Pick one"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="myControl"
+                 [matAutocomplete]="auto1">
+          <mat-autocomplete #auto1="matAutocomplete">
+            @for (option of options; track option) {
+              <mat-option [value]="option">{{option}}</mat-option>
+            }
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+      <div class="fasi-grid-item">
+        <mat-form-field appearance="outline" class="custom-form-field">
+          <mat-label>Horario</mat-label>
+          <input type="text"
+                 placeholder="Pick one"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="myControl"
+                 [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            @for (option of filteredOptions | async; track option) {
+              <mat-option [value]="option">{{option}}</mat-option>
+            }
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+      </section>
+    </mat-card-content>
+
+    <mat-card-footer class="fasi-card-footer"> 
+      <button (click)="saveWorker()"  mat-flat-button class="fasi-button-basic">Agregar</button>
+    </mat-card-footer>
+  </mat-card>
+</div>

@@ -1,0 +1,12 @@
+.fasi-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 390px;
+  width: 360px;
+  padding: 12px 12px;
+}
+
+.fasi-card h1 {
+  text-align: center;
+  font-weight: 400;
+}

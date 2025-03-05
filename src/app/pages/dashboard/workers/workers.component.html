@@ -1,0 +1,81 @@
+<div class="fasi-div-container">
+  <div class="fasi-main">
+    <section class="fasi-section-action">
+      <h3 class="title-option">Trabajadores</h3>
+      <div class="box-action">
+        <mat-form-field appearance="outline" class="custom-form-field">
+          <mat-label>Buscar</mat-label>
+          <input matInput />
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+
+        <button
+          mat-flat-button
+          class="fasi-button-basic"
+          (click)="goMaintenance()"
+        >
+          Crear trabajador
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <table mat-table [dataSource]="listOfworkers" class="mat-elevation-z8">
+        <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>No.</th>
+          <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="firstName">
+          <th mat-header-cell *matHeaderCellDef>Nombre</th>
+          <td mat-cell *matCellDef="let element">{{ element.firstName }}</td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="identification">
+          <th mat-header-cell *matHeaderCellDef>Identificación</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.identification }}
+          </td>
+        </ng-container>
+
+        <tr mat-header-row class="fasi-row-table" *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row  *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </section>
+  </div>
+
+  <!--<mat-list class="fasi-list-custom" aria-hidden="true">
+    <div class="fasi-thead-custom">
+      <th class="fasi-th-custom">id</th>
+      <th class="fasi-th-custom">Nombre</th>
+      <th class="fasi-th-custom">Identificación</th>
+      <th class="fasi-th-custom">
+       <div style="text-align: center;">
+        Acciones
+      </div>
+      </th>
+    </div>
+
+    @for (worker of listOfworkers; track worker.id) {
+
+    <div class="fasi-card-custom">
+      <td class="fasi-td-custom">{{ worker.id }}</td>
+      <td class="fasi-td-custom">{{ worker.firstName }}</td>
+      <td class="fasi-td-custom">{{ worker.identification }}</td>
+      <td class="fasi-td-custom">
+        <div style="text-align: center;">
+          {{ worker.identification }}
+        </div>
+      </td>
+    </div>
+
+    }
+  </mat-list>
+</div> -->
+</div>

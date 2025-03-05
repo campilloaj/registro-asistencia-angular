@@ -1,0 +1,121 @@
+.fasi-div-container {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+
+.fasi-main{
+   width: 85%;
+}
+
+.fasi-section-action {
+   display: flex;
+   justify-content: space-between;
+   gap:10px;
+   align-items: center ;
+   padding-bottom: 16px;
+}
+
+.title-option{
+   margin-block-end: 0px;
+   font-weight: 500;
+   font-size: 25px;
+}
+
+.box-action {
+   display: flex;
+   gap:8px;
+}
+
+.fasi-button-basic{
+   background-color: rgb(68, 1, 126) !important;
+   color:#fff !important;
+   min-width: 150px;
+   padding: 19.3px;
+}
+
+
+.mat-elevation-z8 .fasi-row-table {
+   background-color: #e6eaee !important; /* Cambia esto al color que prefieras */
+   font-weight: bold; 
+}
+
+ .mdc-text-field--outlined .mat-mdc-form-field-infix, .mdc-text-field--no-label .mat-mdc-form-field-infix{
+   padding-top: 0px !important;
+   padding-bottom: 0px !important;
+ }
+
+
+ :host ::ng-deep .custom-form-field{
+  height: 40px !important;
+  display: inherit;
+ }
+
+ :host ::ng-deep .mat-form-field-wrapper{
+   padding-bottom: 0px;
+   padding-top: 0px;
+   height: 40px;
+ }
+
+ :host ::ng-deep .mat-mdc-form-field-flex {
+   height: 40px;
+ }
+
+  :host ::ng-deep .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label{
+    top: 20px;
+  }
+
+ :host ::ng-deep .mat-mdc-form-field-infix{
+    padding: 4px 4px !important;
+    height: 30px;
+    display: flex;
+  }
+
+  :host ::ng-deep .mat-mdc-form-field-input-control {
+    height: 36px !important;
+  }
+  
+
+/*.fasi-card-custom{
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.fasi-list-custom {
+   display: flex;
+   flex-direction: column; 
+   justify-content: center;
+   align-items: center;
+}
+
+.fasi-thead-custom{
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.fasi-td-custom {
+   width: 200px;
+  padding: 4px 8px;
+}
+
+.fasi-card-custom:hover{
+  background-color: #dccbf4 ;
+}
+
+.fasi-th-custom {
+   width: 100%;
+   text-align: start;
+ }
+
+
+ @media screen and  (max-width: 750px)  {
+   .fasi-thead-custom{
+      display: none;    
+   }
+
+   .fasi-card-custom{
+      display: flex;
+      flex-direction: column;
+   }
+ }*/
